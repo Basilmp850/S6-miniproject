@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            .show{
+              background-color: rgb(237, 237, 236);
+              margin-left: 10%;
+              margin-top:20px;
+              margin-right: 10%;
+              padding:30px;
+            }
+            .title{
+              text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+         <!-- <p><%= alldata.content %></p>  -->
+        <div class="title"><h1> <%= alldata.topic%></h1></div>
+        <% alldata.content.forEach(dataa => {  %>
+         <div class="show">
+            <a href="<%=dataa.url %>"><%=dataa.url %></a>
+            <p ><%=dataa.date %></p>
+
+            <p><%=dataa.data%></p>
+
+         </div>
+
+         <% })%>
+    </body>
+</html>

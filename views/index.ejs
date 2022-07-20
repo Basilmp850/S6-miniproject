@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   <!-- <title> Responsive Drop Down Navigation Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="localhost:3000">SearchBook</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">CodingLab</span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li><a href="#">HOME</a></li>
+          <li>
+            <a href="/gettopic">MY TOPICS</a>
+            
+          </li>
+          <li>
+            <a href="/pdfmytopics">GENERATE PDF</a>
+            <!-- <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><a href="#">Dynamic Clock</a></li>
+              <li><a href="#">Form Validation</a></li>
+              <li><a href="#">Card Slider</a></li>
+              <li><a href="#">Complete Website</a></li>
+            </ul> -->
+          </li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+  
+  <div class="popup">
+    <button id  ='show'>CREATE TOPIC</button>
+    
+    <div id = 'dPopupContainer' class = 'popupContainer'>
+        <div id = 'dPopupContent' class ='popupContent'>
+          <form action="/save" method="POST">
+            <label for="createtopic" class="createtopic">Topic name</label><br>
+             <input type="text" name="topic" class="createtopicinput"/> 
+              <div class="buttongroup">
+                 <button type="submit" id="create">Create</button>
+                 <button id="cancel">Cancel</button>
+              </div>
+           </form> 
+        </div>
+    </div>
+    <div class="alertsuccess">
+      
+    </div>
+  </div>
+  <div class="radiobuttoncontainer">
+    <!-- <input type="radio" name = "size" id="small">
+    <label for="small">Small</label><br>
+    <input type="radio" name = "size" id = "large">
+    <label for="large">Large</label> -->
+  </div>
+  <% if (success!= "") {%>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Success!</strong> <%= success %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <!-- <div class="alert alert-success">
+         
+        
+    </div> -->
+    <% } %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script>
+let show = document.querySelector("#show");
+let popupContainer = document.querySelector(".popupContainer");
+const create = document.querySelector("#create");
+const alertsuccess =document.querySelector(".alertsuccess");
+const cancel = document.getElementById("cancel");
+const submit = document.getElementById("submit");
+const inputfield = document.querySelector(".createtopicinput");
+const radiobuttoncontainer = document.querySelector(".radiobuttoncontainer");
+let topicbuttons;
+let lenbutton;
+cancel.addEventListener("click",()=> popupContainer.style.display = "none");
+show.addEventListener("click", () => popupContainer.style.display = "block");
+create.addEventListener("click", () => {
+  let text = inputfield.value;
+  // console.log(text);
+  // let topicbutton = document.createElement("button");
+  // topicbutton.classList.add('topicbutton');
+  // topicbutton.innerText = text;
+  // radiobuttoncontainer.append(topicbutton);
+  topicbuttons = radiobuttoncontainer.querySelectorAll('button');
+  // console.log(topicbuttons);
+   lenbutton = topicbuttons.length;
+   //inputfield.value = '';
+  popupContainer.style.display = "none";
+  const baseUrl= "http://localhost:3000/"
+  
+ 
+  // function postinfo(e) {
+  // e.preventDefault();
+  // for(i = 0; i < lenbutton;i++){
+  //     if(topicbutton === topicbuttons[i]){
+  //       topicbuttons[i].style.backgroundColor = 'blue';
+  //       console.log(topicbutton.innerText);
+  //       const res= fetch(baseUrl,
+  //            {
+  //              method: 'POST',
+  //              headers:{
+  //               "Content-Type" : "application/json "
+  //              },
+  //              body: JSON.stringify({
+  //               parcel: topicbutton.innerText
+  //              })
+  //            }
+  //          );
+           
+           
+  //     }
+  //     else{
+//         topicbuttons[i].style.backgroundColor = 'aqua';
+//       }
+//     }
+           
+//  }
+//  topicbutton.addEventListener('click',postinfo);
+});
+    // // search-box open close js code
+// let navbar = document.querySelector(".navbar");
+// let searchBox = document.querySelector(".search-box .bx-search");
+// // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+// searchBox.addEventListener("click", () => {
+//   navbar.classList.toggle("showInput");
+//   if (navbar.classList.contains("showInput")) {
+//     searchBox.classList.replace("bx-search", "bx-x");
+//   } else {
+//     searchBox.classList.replace("bx-x", "bx-search");
+//   }
+// });
+// // sidebar open close js code
+// let navLinks = document.querySelector(".nav-links");
+// let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+// let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+// menuOpenBtn.onclick = function () {
+//   navLinks.style.left = "0";
+// };
+// menuCloseBtn.onclick = function () {
+//   navLinks.style.left = "-100%";
+// };
+// sidebar submenu open close js code
+// let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+// htmlcssArrow.onclick = function () {
+//   navLinks.classList.toggle("show1");
+// };
+// let moreArrow = document.querySelector(".more-arrow");
+// moreArrow.onclick = function () {
+//   navLinks.classList.toggle("show2");
+// };
+// let jsArrow = document.querySelector(".js-arrow");
+// jsArrow.onclick = function () {
+//   navLinks.classList.toggle("show3");
+// };
+// show.onclick = function(){
+//   popupContainer.style.display = "block";
+// }
+  
+//   fetch("/save", {
+     
+//      // Adding method type
+//      method: "POST",
+      
+//      // Adding body or contents to send
+//      body: JSON.stringify({
+//          topic: inputfield.value,
+//          selected: false,
+//          contents: "gviygv"
+//      }),
+      
+//      // Adding headers to the request
+//      headers: {
+//          "Content-type": "application/json; charset=UTF-8"
+//      }
+//  })
+  
+//  // Converting to JSON
+//  .then(response => response.json())
+  
+//  // Displaying results to console
+//  .then(json => console.log(json));
+// for(i = 0; i < lenbutton; i++){
+//   topicbuttons[i].addEventListener('click',function(){
+//     topicbuttons[i].style.backgroundColor = "white";
+//   });
+// }
+//cancel.addEventListener("click", e => popupContainer.style.display= "none");
+  </script>
+</body>
+</html>
