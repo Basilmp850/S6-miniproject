@@ -38,6 +38,8 @@ app.use(express.json());
 app.set('view engine','ejs');
 // app.set('views', path.join(__dirname, 'views'));
 
+require('dotenv').config()
+
 app.use(bp.urlencoded({extended:false}));
 
 
@@ -227,7 +229,8 @@ app.use('/',(req,res)=>{
 mongoose.connect('mongodb+srv://mongo:jonathan@cluster0.2uncw.mongodb.net/test1?retryWrites=true&w=majority')
 // mongoose.connect('mongodb+srv://roshan:roshan@searchbook.9bw1f7a.mongodb.net/first?retryWrites=true&w=majority')
 .then(()=>{
-  
-   app.listen(3000);
+   const PORT = process.env.PORT || 3000;
+
+   app.listen(PORT);
    console.log("Mongodb live");})
 .catch(result=>{console.log('error');});
