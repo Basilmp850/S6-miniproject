@@ -1,0 +1,32 @@
+{
+  "name": "s6-miniproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "connect-mongodb-session": "^3.1.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.4.6",
+    "nodemon": "^2.0.19",
+    "path": "^0.12.7",
+    "pdf-creator-node": "^2.3.4",
+    "phantomjs-prebuilt": "^2.1.16"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Basilmp850/S6-miniproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Basilmp850/S6-miniproject/issues"
+  },
+  "homepage": "https://github.com/Basilmp850/S6-miniproject#readme"
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   <!-- <title> Responsive Drop Down Navigation Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="localhost:3000"><img src="Logo.png"style = "width:50px;margin-right:10px"><span style="transform: translateY(50px);">SearchBook</span></a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">CodingLab</span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li><a href="#">HOME</a></li>
+          <li>
+            <a href="/gettopic">MY TOPICS</a>
+            
+          </li>
+          <li>
+            <a href="/pdfmytopics">GENERATE PDF</a>
+            <!-- <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><a href="#">Dynamic Clock</a></li>
+              <li><a href="#">Form Validation</a></li>
+              <li><a href="#">Card Slider</a></li>
+              <li><a href="#">Complete Website</a></li>
+            </ul> -->
+          </li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+  
+  <!-- <div class="popup">
+    <button id  ='show'>CREATE TOPIC</button>
+    
+    <div id = 'dPopupContainer' class = 'popupContainer'>
+        <div id = 'dPopupContent' class ='popupContent'>
+          <form action="/save" method="POST">
+            <label for="createtopic" class="createtopic">Topic name</label><br>
+             <input type="text" name="topic" class="createtopicinput"/> 
+              <div class="buttongroup">
+                 <button type="submit" id="create">Create</button>
+                 <button id="cancel">Cancel</button>
+              </div>
+           </form> 
+        </div>
+    </div> -->
+
+    <!-- <div class="alertsuccess">
+      
+    </div>
+  </div> -->
+
+  <div class="buttoncontainer">
+
+
+    
+    <% if(alldata.length > 0){ %>
+        <% alldata.forEach(data => {  
+           
+            var c=   data.topic; %>
+          <a href="/pdfhowing/<%=data.topic%>" style = "text-decoration:none;"> <button  id="<%=c%>" class="btngrp" onclick="myFunction(this.getAttribute('id'),this.getAttribute('class'));" ><%=data.topic%></button></a>
+
+        <% })%>
+    <% } else { %>
+        <p> There are no topics to display...</p>
+    <% } %>
+    
+    <!-- <input type="radio" name = "size" id="small">
+    <label for="small">Small</label><br>
+    <input type="radio" name = "size" id = "large">
+    <label for="large">Large</label> -->
+
+  </div>
+
+
+  
+  <script>
+
+const baseUrl= "http://localhost:3000/gettopic";
+ async function myFunction(idnme,clsnme) {
+  console.log(idnme);
+  elements = document.getElementsByClassName(clsnme);
+  for (var i = 0; i < elements.length; i++) {
+        elements[i].style.backgroundColor="#827397";
+    }
+  document.getElementById(idnme).style.background = '#4D4C7D';
+  
+  // const res= await fetch(baseUrl,
+  //   {
+  //     method: 'POST',
+  //     headers:{
+  //     "Content-Type" : "application/json "
+  //     },
+  //     body: JSON.stringify({
+  //     parcel: idnme
+  //      })
+  //   }
+    
+  //  );
+   console.log('ayachu');
+}
+
+
+  </script>
+</body>
+</html>
+

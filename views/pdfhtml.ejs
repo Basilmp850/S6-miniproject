@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            .show{
+              background-color: rgb(237, 237, 236);
+              margin-left: auto;
+              margin-top:auto;
+            
+              margin-top: 30px;
+             
+            }
+            p{
+              font-size: 25px;
+              font-weight: bold;
+            }
+            .title{
+              text-align: center;
+              font-size : 50px;
+              margin-bottom: 45px;
+            }
+        </style>
+    </head>
+    <body>
+        {{#each d}}
+           
+        
+         <!-- <p><%= alldata.content %></p>  -->
+        <div class="title"><u><h1> {{this.topic}}</h1></u></div>
+        
+        <!-- <% alldata.content.forEach(dataa => {  %>
+         <div class="show">
+            <a href="<%=dataa.url %>"><%=dataa.url %></a>
+            <p ><%=dataa.date %></p>
+            
+               <p>hello bai</p> 
+            <p><%=dataa.data%></p>
+
+         </div> -->
+      
+
+       </div>
+
+        
+
+         {{/each}}
+         
+         {{#each contentarray}}
+         <div class="show">
+         
+          <p>{{this.data}}</p>
+        </div>
+           {{/each}}
+        
+    </body>
+</html>
