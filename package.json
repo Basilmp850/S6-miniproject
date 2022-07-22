@@ -7,17 +7,32 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
     "connect-mongodb-session": "^3.1.1",
+<<<<<<< HEAD
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "mongoose": "^6.4.6",
     "nodemon": "^2.0.19",
+=======
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.4.4",
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
     "path": "^0.12.7",
     "pdf-creator-node": "^2.3.4",
     "phantomjs-prebuilt": "^2.1.16"
   },
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "node app.js",
+    "server": "npx node app.js"
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
   },
   "repository": {
     "type": "git",

@@ -15,8 +15,12 @@
    <nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
+<<<<<<< HEAD
       
       <div class="logo"><a href="localhost:3000"><img src="Logo.png"style = "width:50px;margin-right:10px">SearchBook</a></div>
+=======
+      <div class="logo"><a href="#">SearchBook</a></div>
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
       <div class="nav-links">
         <div class="sidebar-logo">
           <span class="logo-name">CodingLab</span>
@@ -81,9 +85,15 @@
             var c=   data.topic; 
             %>
           <div style = "display: flex;justify-content: center;align-items: center;">
+<<<<<<< HEAD
           <a href="/xhowing/<%=data.topic%>" class="topicsa"> <button  id="<%=c%>" class="btngrp" onclick="myFunction(this.getAttribute('id'),this.getAttribute('class'));" ><%=data.topic%></button></a>
        
           <a href="/gettopic/<%=data.topic%>" > <button style="border-radius: 10px;font-weight:bold;padding:10px;transform:translateY(10px);margin-left:40px;background-color:#E9D5CA;color:#363062;" >Select</button></a>
+=======
+          <a href="/xhowing/<%=data.topic%>"> <button  id="<%=c%>" class="btngrp" onclick="myFunction(this.getAttribute('id'),this.getAttribute('class'));" ><%=data.topic%></button></a>
+       
+          <a href="/gettopic/<%=data.topic%>"> <button style="padding:10px;transform:translateY(10px);margin-left:40px;">Select</button></a>
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
       
           </div>
         
@@ -113,9 +123,15 @@ const baseUrl= "http://localhost:3000/gettopic";
   console.log(idnme);
   elements = document.getElementsByClassName(clsnme);
   for (var i = 0; i < elements.length; i++) {
+<<<<<<< HEAD
         elements[i].style.backgroundColor="#827397";
     }
   document.getElementById(idnme).style.background = '#4D4C7D';
+=======
+        elements[i].style.backgroundColor="aqua";
+    }
+  document.getElementById(idnme).style.background = 'blue';
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
   
   // const res= await fetch(baseUrl,
   //   {

@@ -6,10 +6,15 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+<<<<<<< HEAD
 
 body{
   min-height: 100vh;
   
+=======
+body{
+  min-height: 100vh;
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
 }
 nav{
   position: fixed;
@@ -18,7 +23,11 @@ nav{
   width: 100%;
   height: 100%;
   height: 70px;
+<<<<<<< HEAD
   background: #4D4C7D;
+=======
+  background: #da168c;
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   z-index: 99;
 }
@@ -320,6 +329,7 @@ nav .navbar .links li .sub-menu li{
 
     .popupContent {
 
+<<<<<<< HEAD
         background-color: #827397;
         
         height: 380px;
@@ -329,6 +339,15 @@ nav .navbar .links li .sub-menu li{
         text-align:center;
         border-radius: 10px;
         border: 2px solid #363062;
+=======
+        background-color: chartreuse;
+        
+        height: 150px;
+        width: 40%;
+        margin: auto;
+        
+        text-align:center;
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
        
 
     }
@@ -349,11 +368,18 @@ nav .navbar .links li .sub-menu li{
         margin-right: auto;
         display: block;
         padding: 9px;
+<<<<<<< HEAD
         background-color: #E9D5CA;
         /* border: 2px solid blue;  */
         border:0mm;
         /* cursor: pointer; */
         color: #363062;
+=======
+        background-color: blanchedalmond;
+        border: 2px solid blue;
+        /* cursor: pointer; */
+        color:blue;
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
     }
 
     .alertsuccess{
@@ -376,6 +402,7 @@ nav .navbar .links li .sub-menu li{
       margin-right:auto;
       margin-top:100px;
     }
+<<<<<<< HEAD
     #create{
       background-color:#e9d5ca ;
       border:0mm ;
@@ -385,6 +412,8 @@ nav .navbar .links li .sub-menu li{
       background-color:#e9d5ca ;
       border:0mm ;
     }
+=======
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
 
   
 
@@ -457,12 +486,18 @@ nav .navbar .links li .sub-menu li{
       margin-right:auto;
       
       border: 2px solid black;
+<<<<<<< HEAD
       background-color: #827397;
       color:#E9D5CA;
+=======
+      background-color: aqua;
+      color:black;
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
       width: 400px;
       margin-top:20px;
       font-size: 1.6rem;
       font-weight: bold;
+<<<<<<< HEAD
       border-radius: 10px;
 
     }
@@ -507,3 +542,14 @@ nav .navbar .links li .sub-menu li{
       border-radius: 10px;
     }
     
+=======
+      border-radius: 20px;
+
+    }
+
+  
+ 
+      
+    
+ 
+>>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
